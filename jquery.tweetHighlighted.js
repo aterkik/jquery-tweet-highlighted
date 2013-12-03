@@ -6,6 +6,7 @@
 (function ($) {
     $.fn.tweetHighlighted = function(options) {
         var settings = {};
+        options = options || {};
         // minimum length of the selected text for the tweet button to appear
         settings.minLength = options.minLength || 8;
         // maximum length of the selected text for the tweet button to appear
