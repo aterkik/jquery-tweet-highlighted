@@ -18,9 +18,11 @@
         settings.maxLength = options.maxLength || 144 * 4;
         // extra content to attach (mostly used to add URLs)
         settings.extra = options.extra || '';
-        // twitter via handle
+        // twitter 'via' handle
         // (basically appends 'via @twitterhandle' to the tweet)
         settings.via = options.via || null;
+        // arguments to pass to the window.open() function
+        settings.popupArgs = options.popArgs || 'width=400,height=400,toolbar=0,location=0';
 
         // get an array of classes filtering out empty whitespaces
         classes = settings.cssClass.split(' ').filter(function(item) {
@@ -88,7 +90,7 @@
              ).fadeIn(500
              ).click(function(e) {
                  $(settings._selector).fadeOut(500).remove();
-                 window.open(url, '_blank', 'width=400,height=400,toolbar=0,location=0');
+                 window.open(url, '_blank', settings.popupArgs);
              });
         });      
     };
