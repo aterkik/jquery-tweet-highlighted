@@ -24,7 +24,7 @@ Use any subset of the options below (all of the options are optional).
 ```javascript
 $('body').tweetHighlighted({
                              // html node to use as the 'Tweet' button
-                             node: '<a href="#"><img src="tweet.png" alt="tweet icon"></a>',
+                             node: '<a href="#"><img src="tweet.png" width="90px" height="30px" alt="tweet icon"></a>',
                              // class attribute to attach to the node
                              cssClass: 'btn btn-primary',
                              // minimum length of selected text needed to show the 'Tweet' button
