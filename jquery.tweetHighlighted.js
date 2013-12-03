@@ -7,9 +7,9 @@
     $.fn.tweetHighlighted = function(options) {
         var settings = {};
         // minimum length of the selected text for the tweet button to appear
-        settings.minLength = options.minLength || 10;
+        settings.minLength = options.minLength || 8;
         // maximum length of the selected text for the tweet button to appear
-        settings.maxLength = options.maxLength || 14;
+        settings.maxLength = options.maxLength || 144 * 2;
         // twitter via
         settings.via = options.via || '';
         settings.node = options.node || '<button type="button">Tweet</button>';
