@@ -1,0 +1,25 @@
+{
+    "name": "tweet-highlighted",
+    "title": "jQuery Tweet Highlighted",
+    "description": "jQuery plugin that allows tweeting a user selected/highlighted text.",
+    "keywords": [
+        "text",
+        "tweet",
+        "highlight"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Andy Terkik",
+        "url": "http://github.com/aterkik"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/aterkik/jquery-tweet-highlighted/LICENSE"
+        }
+    ],
+    "homepage": "https://github.com/aterkik/jquery-tweet-highlighted",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
