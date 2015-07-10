@@ -23,6 +23,8 @@
         settings.via = options.via || null;
         // arguments to pass to the window.open() function
         settings.popupArgs = options.popArgs || 'width=400,height=400,toolbar=0,location=0';
+        // defines a callback function to pass text to when a user takes action
+        settings.callback = options.callback || null;
 
         // get an array of classes filtering out empty whitespaces
         classes = settings.cssClass.split(' ').filter(function(item) {
@@ -90,7 +92,12 @@
              ).fadeIn(500
              ).click(function(e) {
                  $(settings._selector).fadeOut(500).remove();
+                 // Open the tweet window
                  window.open(url, '_blank', settings.popupArgs);
+                 // Notify the callback function if defined
+                 if( settings.callback != null ){
+                   settings.callback(text);
+                 }
              });
         });      
     };
